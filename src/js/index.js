@@ -9,7 +9,21 @@ import "bootstrap";
 import "../styles/index.scss";
 
 //import your own components
-import { Home } from "./component/home.js";
+import Home from "./component/home.js";
 
 //render your react application
-ReactDOM.render(<Home />, document.querySelector("#app"));
+
+//>> TIMER RENDERING FROM INDEX <<
+
+let time = 0;
+
+// setInterval(() => {
+// 	time++; // 2 segundo => 2
+// 	ReactDOM.render(
+// 		<Home propTime={time} title="Timer from Index" />,
+// 		document.querySelector("#app")
+// 	); //renderiza
+// 	console.log(time);
+// }, 1000);
+
+ReactDOM.render(<Home time={time} />, document.querySelector("#app"));
